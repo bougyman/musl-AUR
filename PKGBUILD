@@ -1,7 +1,7 @@
 # Maintainer: TJ Vanderpoel <tj@rubyists>
 
 pkgname=musl
-pkgver=0.9.15
+pkgver=1.0.0
 pkgrel=1
 pkgdesc="An implementation of the C/POSIX standard library intended for use on Linux-based systems"
 arch=('i686' 'x86_64')
@@ -21,5 +21,7 @@ package() {
   cd "$srcdir/$pkgname-$pkgver"
 
   make DESTDIR="$pkgdir/" install
-  mv "$pkgdir/lib/*" "$pkgdir/usr/lib/"
+  install -d -m0755 "$pkgdir/usr/lib/"
+  mv "$pkgdir/lib/ld-musl-x86_64.so.1" "$pkgdir/usr/lib/ld-musl-x86_64.so.1"
 }
+md5sums=('e54664fdf211d27737e328c4462b545e')

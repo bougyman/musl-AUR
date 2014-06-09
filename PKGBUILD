@@ -1,8 +1,8 @@
 # Maintainer: TJ Vanderpoel <tj@rubyists>
 
 pkgname=musl
-pkgver=1.0.2
-pkgrel=2
+pkgver=1.0.3
+pkgrel=1
 pkgdesc="An implementation of the C/POSIX standard library intended for use on Linux-based systems"
 arch=('i686' 'x86_64')
 url="http://www.musl-libc.org/"
@@ -27,5 +27,5 @@ package() {
   cp COPYRIGHT README "$pkgdir"/usr/share/doc/musl/
   cp "$srcdir"/CHANGELOG "$pkgdir"/usr/share/doc/musl/CHANGELOG.archlinux
 }
-md5sums=('cd1feccb98112cf3685edb4499306d83'
-         '15cd2290ae45a981019b69343113fd2b')
+md5sums=('92a0f8b66b3592d914213596ec363216'
+         '504e48bb43b4bc16875dc99b6bb2bcc9')
